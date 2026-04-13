@@ -4,9 +4,9 @@
 
 ## 🔗 核心交付物 (Project Deliverables)
 
-* 👉 **[【强烈推荐点击阅读】完整交互式商业数据洞察报告 (飞书 Doc)](https://qcn7xdah8cug.feishu.cn/wiki/NbK9wDkhgiBoVjkWsZRcIWi8nTc?from=from_copylink)
-* ** * 📄 **[本仓库 SQL 源码 (点击查看完整数据处理逻辑)](ecommerce_user_behavior_analysis.sql)** ## 💡 项目核心高光 (Key Highlights)
-
+* 👉 **[【强烈推荐点击阅读】完整交互式商业数据洞察报告 (飞书 Doc)](https://qcn7xdah8cug.feishu.cn/wiki/NbK9wDkhgiBoVjkWsZRcIWi8nTc?from=from_copylink)**
+* 📄 **[本仓库 SQL 源码 (点击查看完整数据处理逻辑)](ecommerce_user_behavior_analysis.sql)**
+## 💡 项目核心高光 (Key Highlights)
 1.  **转化链路重构**：敏锐识别并剔除“收藏”与“加购”并行意向导致的漏斗畸形，重构真实主干链路，验证购物车内支付转化率高达 **91.10%**。
 2.  **“直购”模式发掘**：通过巧妙的二进制状态位压缩技术拆解用户动线，证实高达 **76.21%** 的成单完全越过购物车，揭示了标品极速转化的消费者心智。
 3.  **潮汐效应验证**：下钻至小时级颗粒度，精准定位晚 20:00-22:00 的“流量与转化双高峰”，为大促资源脉冲式定档提供硬核数据支撑。
