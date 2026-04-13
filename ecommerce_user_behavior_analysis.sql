@@ -242,7 +242,7 @@ SELECT
     LPAD(HOUR(behavior_time), 2, '0') AS hours, 
     COUNT(IF(behavior_type='pv', 1, NULL)) AS pv,
     COUNT(IF(behavior_type='cart', 1, NULL)) AS cart,
-    COUNT(IF(behavior_type='fav', 1, NULL)) AS fav,     -- ✅ 改为 'fav'
+    COUNT(IF(behavior_type='fav', 1, NULL)) AS fav,     
     COUNT(IF(behavior_type='buy', 1, NULL)) AS buy
 FROM user_behavior
 -- 关键修改：GROUP BY 使用与 SELECT 中完全相同的表达式
@@ -263,7 +263,7 @@ CREATE TABLE behavior_num (
 INSERT INTO behavior_num (behavior_type, behavior_count_num)
 SELECT behavior_type, COUNT(*)
 FROM user_behavior
-WHERE behavior_type IN ('pv', 'cart', 'fav', 'buy')  -- ✅ 包含 'fav'
+WHERE behavior_type IN ('pv', 'cart', 'fav', 'buy')  
 GROUP BY behavior_type;
 
 SELECT * FROM behavior_num LIMIT 10;
@@ -442,7 +442,7 @@ FROM (
         user_id, item_id,
         CONCAT(
             MAX(CASE WHEN behavior_type = 'pv' THEN 1 ELSE 0 END),
-            MAX(CASE WHEN behavior_type = 'fav' THEN 1 ELSE 0 END),    -- ✅ 改为 'fav'
+            MAX(CASE WHEN behavior_type = 'fav' THEN 1 ELSE 0 END),   
             MAX(CASE WHEN behavior_type = 'cart' THEN 1 ELSE 0 END),
             MAX(CASE WHEN behavior_type = 'buy' THEN 1 ELSE 0 END)
         ) AS 购买路径类型
